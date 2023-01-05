@@ -52,7 +52,7 @@ public class GoRestAPIs {
 
         Response response = given().filter(new RequestLoggingFilter(requestCapture))
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer 759a53e9a7d24a22f113d7766c5124c9e69f92f873660e6e9a06aa175038aef8")
+                .header("Authorization", "Bearer 05334b37498beb44a99cb4920b8aeba743afebba6d4269fa32ea879e5efffb33")
                         .body(user)
                 .post(Constants.USERS_ENDPOINT);
 
@@ -73,7 +73,7 @@ public class GoRestAPIs {
 
         Response response = given().filter(new RequestLoggingFilter(requestCapture))
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer 759a53e9a7d24a22f113d7766c5124c9e69f92f873660e6e9a06aa175038aef8")
+                .header("Authorization", "Bearer 05334b37498beb44a99cb4920b8aeba743afebba6d4269fa32ea879e5efffb33")
                 .body(user)
                 .patch(Constants.USERS_ENDPOINT+"/"+userID);
 
@@ -88,7 +88,7 @@ public class GoRestAPIs {
 
         Response response = given().filter(new RequestLoggingFilter(requestCapture))
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer 759a53e9a7d24a22f113d7766c5124c9e69f92f873660e6e9a06aa175038aef8")
+                .header("Authorization", "Bearer 05334b37498beb44a99cb4920b8aeba743afebba6d4269fa32ea879e5efffb33")
                         .delete(Constants.USERS_ENDPOINT+"/"+userID);
 
         requestCapture.flush();

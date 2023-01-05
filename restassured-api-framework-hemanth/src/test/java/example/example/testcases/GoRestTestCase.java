@@ -25,6 +25,7 @@ public class GoRestTestCase extends TestSetup {
 
         List<String> users = response.jsonPath().getList("name");
         Assert.assertTrue(users.size() == 10);
+        Assert.assertTrue(response.getHeader("Content-Type").equals("application/json; charset=utf-8"));
         Assert.assertTrue(response.getHeader("x-pagination-limit").equals("10"));
         Assert.assertEquals(response.statusCode(), 200);
         context.setAttribute("userID", response.jsonPath().get("[0].id"));
